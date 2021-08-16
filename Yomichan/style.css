@@ -1,0 +1,44 @@
+@font-face {
+	font-family: customfont;
+	src: url("_NotoSans-Regular.ttf");
+}
+
+.card {
+  font-family: customfont;
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+.meaning {
+	font-size:16px;
+	/*display:flex;*/
+	/*justify-content:center;*/
+	display: table;
+  	margin: 0 auto;
+
+}
+
+/*
+.mobile .type-answer{
+	display: none;
+}
+*/
+
+#typeans {
+	font-size:26px;
+	text-align:center;
+	width:200px;
+	background-color:#222222;
+	color:#ffffff;
+ }
+.typeGood {
+	background-color:#005500;
+}
+.typeBad{
+	background-color:#770000;
+}
+.typeMissed{
+	background-color:#666666;
+}

@@ -1,0 +1,19 @@
+<script>
+var typeans=document.getElementById("typeans");
+if(typeans!=null) typeans.style.fontSize = "26px";
+
+var t = "{{Traditional}}";
+if( t != "" ) {
+    h = document.getElementById("hanzi");
+    h.innerHTML = "{{Traditional}}";
+}
+</script>
+
+<br>
+<div style="font-size:21px"><br></div>
+<div id="hanzi" style="font-size:60px">
+    {{Hanzi}}
+</div>
+<br>
+<hr>
+{{type:Hanzi}}

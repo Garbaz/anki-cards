@@ -1,0 +1,46 @@
+<script>
+var typeans=document.getElementById("typeans");
+if(typeans!=null) typeans.style.fontSize = "26px";
+
+var t = "{{Traditional}}";
+if( t != "" ) {
+    c = document.getElementById("color");
+    ss = c.getElementsByTagName("span");
+    for(i = 0; i < ss.length; i++) {
+        ss[i].innerHTML = t[i];
+    }
+}
+</script>
+
+<br>
+<div id="color" style="font-size:60px">
+    {{Color}}
+</div>
+<div style="font-size:24px">
+    {{Bopomofo}}
+</div>
+<div style="font-size:26px"><br></div>
+<hr id=answer>
+<div style="display:none">
+    {{Sound}}
+</div>
+<div style="font-size:26px">
+    {{#Traditional}}({{Traditional}}){{/Traditional}}
+</div>
+
+{{type:Hanzi}}
+<hr>
+
+<div class="meaning">
+{{hint:English}}
+</div>
+<hr>
+
+<div style="font-size:12px">
+<a href="https://dict.naver.com/linedict/zhendict/dict.html#/cnen/search?query={{Hanzi}}">LINE Dict</a> |
+<a href="https://www.iciba.com/word?w={{Hanzi}}">iCIBA</a> |
+<a href="https://dict.cn/{{Hanzi}}">dict.cn</a> |
+<a href="https://forvo.com/search/{{Hanzi}}/zh/">Forvo</a> |
+<a href="https://tatoeba.org/en/sentences/search?from=cmn&to=eng&query={{Hanzi}}">Tatoeba</a> |
+<a href="http://jukuu.com/show-{{Hanzi}}-0.html">Jukuu</a>
+</div>
