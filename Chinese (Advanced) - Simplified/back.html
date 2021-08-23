@@ -1,6 +1,6 @@
 <script>
-var typeans=document.getElementById("typeans");
-if(typeans!=null) typeans.style.fontSize = "26px";
+    var typeans = document.getElementById("typeans");
+    if (typeans != null) typeans.style.fontSize = "26px";
 </script>
 
 <br>
@@ -23,16 +23,22 @@ if(typeans!=null) typeans.style.fontSize = "26px";
 <hr>
 
 <div class="meaning">
-{{hint:English}}
+    {{hint:English}}
 </div>
 <hr>
 
 <div style="font-size:12px">
-<a href="https://dict.naver.com/linedict/zhendict/dict.html#/cnen/search?query={{Hanzi}}">LINE Dict</a> |
-<a href="https://www.iciba.com/word?w={{Hanzi}}">iCIBA</a> |
-<a href="https://dict.cn/{{Hanzi}}">dict.cn</a> |
-<a href="https://forvo.com/search/{{Hanzi}}/zh/">Forvo</a> |
-<a href="https://tatoeba.org/en/sentences/search?from=cmn&to=eng&query={{Hanzi}}">Tatoeba</a> |
-<a href="http://jukuu.com/show-{{Hanzi}}-0.html">Jukuu</a>
+    <a href="https://dict.naver.com/linedict/zhendict/dict.html#/cnen/search?query={{Hanzi}}">LINE Dict</a> |
+    <a href="https://forvo.com/word/{{Hanzi}}/#zh">Forvo</a> |
+    <a href="https://dict.cn/{{Hanzi}}">dict.cn</a> |
+    <a href="https://www.iciba.com/word?w={{Hanzi}}">iCIBA</a> |
+    <a href="https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={{Hanzi}}">MDBG</a> |
+    <a href="http://jukuu.com/show-{{Hanzi}}-0.html">Jukuu</a> |
+    {{^Traditional}}
+    <a href="https://www.moedict.tw/{{Hanzi}}">Moedict</a> |
+    {{/Traditional}}
+    {{#Traditional}}
+    <a href="https://www.moedict.tw/{{Traditional}}">Moedict</a> |
+    {{/Traditional}}
+    <a href="https://tatoeba.org/en/sentences/search?from=cmn&to=eng&query={{Hanzi}}">Tatoeba</a>
 </div>
-    
