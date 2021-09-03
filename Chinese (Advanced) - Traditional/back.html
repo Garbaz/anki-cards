@@ -4,20 +4,21 @@
 
     var t = "{{Traditional}}";
     if (t != "") {
-        c = document.getElementById("color");
-        ss = c.getElementsByTagName("span");
-        for (i = 0; i < ss.length; i++) {
+        var c = document.getElementById("color");
+        var ss = c.getElementsByTagName("span");
+        for (var i = 0; i < ss.length; i++) {
             ss[i].innerHTML = t[i];
         }
     }
 </script>
 
 <br>
-<div id="color" style="font-size:60px">
-    {{Color}}
+
+<div id="color" class="ruby_onlytext">
+    {{Ruby (Bopomofo)}}
 </div>
-<div style="font-size:24px">
-    {{Bopomofo}}
+<div class="ruby_onlyruby">
+    {{Ruby (Bopomofo)}}
 </div>
 <div style="font-size:26px"><br></div>
 <hr id=answer>
@@ -38,17 +39,31 @@
 
 <div style="font-size:12px">
     <a href="https://dict.naver.com/linedict/zhendict/dict.html#/cnen/search?query={{Hanzi}}">LINE Dict</a> |
+{{^Traditional}}
     <a href="https://forvo.com/word/{{Hanzi}}/#zh">Forvo</a> |
+{{/Traditional}}    
+{{#Traditional}}
+    <a href="https://forvo.com/word/{{Hanzi}}/#zh">Forvo (简)</a> |
+    <a href="https://forvo.com/word/{{Traditional}}/#zh">Forvo (繁)</a> |
+{{/Traditional}}
     <a href="https://dict.cn/{{Hanzi}}">dict.cn</a> |
     <a href="https://www.iciba.com/word?w={{Hanzi}}">iCIBA</a> |
     <a href="https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={{Hanzi}}">MDBG</a> |
     <a href="http://jukuu.com/show-{{Hanzi}}-0.html">Jukuu</a> |
-    {{^Traditional}}
+{{^Traditional}}
     <a href="https://www.moedict.tw/{{Hanzi}}">Moedict</a> |
-    {{/Traditional}}
-    {{#Traditional}}
+{{/Traditional}}
+{{#Traditional}}
     <a href="https://www.moedict.tw/{{Traditional}}">Moedict</a> |
-    {{/Traditional}}
+{{/Traditional}}
     <a href="https://tatoeba.org/en/sentences/search?from=cmn&to=eng&query={{Hanzi}}">Tatoeba</a> |
     <a href="https://resources.allsetlearning.com/chinese/grammar/{{Hanzi}}">Grammar Wiki</a>
+</div>
+
+<!--
+<div id="color" style="font-size:60px">
+    {{Color}}
+</div>
+<div style="font-size:24px">
+    {{Bopomofo}}
 </div>

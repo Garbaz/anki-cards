@@ -1,38 +1,44 @@
 .card {
-	font-size: 40px;
-	text-align: center;
-	color: black;
-	background-color: white;
-  }
-  
-  .meaning {
-	  font-size:16px;
-	  display: table;
-		margin: 0 auto;
-  
-  }
-  
-  #typeans {
-	  font-size:26px;
-	  text-align:center;
-	  width:200px;
-	  background-color:#222222;
-	  color:#ffffff;
-   }
-  .typeGood {
-	  background-color:#005500;
-  }
-  .typeBad{
-	  background-color:#770000;
-  }
-  .typeMissed{
-	  background-color:#666666;
-  }
-  
-  .tone1 {color: #dd0000;}
-  .tone2 {color: #ee7700;}
-  .tone3 {color: #00bb33;}
-  .tone4 {color: #0088ff;}
-  .tone5 {color: #aaaaaa;}
-  
-  .night_mode { }	/*To disable color inversion in AnkiDroid*/
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+.meaning {
+	font-size:16px;
+	display: table;
+  	margin: 0 auto;
+
+}
+
+#typeans {
+	font-size:26px;
+	text-align:center;
+	width:200px;
+	background-color:#222222;
+	color:#ffffff;
+ }
+.typeGood {
+	background-color:#005500;
+}
+.typeBad{
+	background-color:#770000;
+}
+.typeMissed{
+	background-color:#666666;
+}
+
+.tone1 {color: #dd0000;}
+.tone2 {color: #ee7700;}
+.tone3 {color: #00bb33;}
+.tone4 {color: #0088ff;}
+.tone5 {color: #aaaaaa;}
+
+.night_mode { }	/*To disable color inversion in AnkiDroid*/
+
+/* This mess allows for isolating the text and ruby text of a ruby element*/
+.ruby_onlytext { font-size: 60px; }
+.ruby_onlytext rt{ display: none; }
+.ruby_onlyruby ruby { font-size: 0px; }
+.ruby_onlyruby rt{ font-size: 24px; }
