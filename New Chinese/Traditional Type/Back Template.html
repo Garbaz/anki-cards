@@ -1,0 +1,77 @@
+<div style="font-size:60px">
+    <span class="colourC">{{Traditional}}</span>
+</div>
+<div style="font-size: 24px">
+	<span class="colourS">{{Zhuyin}}</span>
+</div>
+<br>
+<div style="font-size:20px">
+	(<span class="">{{Simplified}}</span>)
+</div>
+
+<div style="display:none">
+{{^Sound}}
+	{{tts zh_CN:Simplified}}
+{{/Sound}}
+{{#Sound}}
+	{{Sound}}
+{{/Sound}}
+</div>
+
+<hr id=answer>
+
+{{type:Simplified}}
+
+<hr>
+
+<div class="meaning">
+    {{hint:English}}
+</div>
+
+<hr>
+
+<div style="font-size:12px">
+    <a href="https://dict.naver.com/linedict/zhendict/dict.html#/cnen/search?query={{Simplified}}">LINE Dict</a> |
+    <a href="https://forvo.com/word/{{Simplified}}/#zh">Forvo (简)</a> |
+    <a href="https://forvo.com/word/{{Traditional}}/#zh">Forvo (繁)</a> |
+    <a href="https://dict.cn/{{Simplified}}">dict.cn</a> |
+    <a href="https://www.iciba.com/word?w={{Simplified}}">iCIBA</a> |
+    <a href="https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={{Simplified}}">MDBG</a> |
+    <a href="http://jukuu.com/show-{{Simplified}}-0.html">Jukuu</a> |
+    <a href="https://www.moedict.tw/{{Traditional}}">Moedict</a> |
+    <a href="https://tatoeba.org/en/sentences/search?from=cmn&to=eng&query={{Simplified}}">Tatoeba</a> |
+    <a href="https://resources.allsetlearning.com/chinese/grammar/{{Simplified}}">Grammar Wiki</a>
+</div>
+
+
+
+<script>
+    var typeans = document.getElementById("typeans");
+    if (typeans != null) typeans.style.fontSize = "26px";
+
+var pinyin = "{{Pinyin (Numbers)}}";
+var tones = [];
+for(var i = 0; i < pinyin.length; i++) {
+  if(pinyin[i] in ["1","2","3","4","5"]) {
+    tones += pinyin[i];
+  }
+}
+
+function colorize(a) {
+	ret = "";
+	for(var i = 0; i < Math.min(a.length,pinyin.length); i++) {
+  	ret += "<span class=\"tone" + tones[i] + "\">" + a[i] + "</span>";
+  }
+  return ret;
+}
+
+colourC = document.getElementsByClassName("colourC");
+for(var i = 0; i < colourC.length; i++) {
+	colourC[i].innerHTML = colorize(colourC[i].innerHTML);
+}
+
+colourS = document.getElementsByClassName("colourS");
+for(var i = 0; i < colourS.length; i++) {
+	colourS[i].innerHTML = colorize(colourS[i].innerHTML.split(" "));
+}
+</script>
