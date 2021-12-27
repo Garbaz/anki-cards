@@ -1,0 +1,42 @@
+<div style="font-size:60px">
+	<span>{{Word}}</span>
+</div>
+<div style="font-size: 24px">
+	<span>{{Reading}}</span>
+</div>
+
+{{^Sound}}
+	<span class="hide_mobile">[Missing Sound]</span>
+	<tts service="android" voice="ja_JP" class="hide_pc">{{Reading}}</tts>
+{{/Sound}}
+{{#Sound}}
+<div style="display:none">
+	{{Sound}}
+</div>
+{{/Sound}}
+
+<hr>
+
+{{type:Word}}
+
+<hr>
+
+<div class="meaning">
+    {{hint:English}}
+</div>
+
+<hr>
+
+<div style="font-size:12px">
+	<a href="https://jisho.org/search/{{Word}}"> Jisho </a> |
+    <a href="https://forvo.com/word/{{Word}}/#zh"> Forvo </a> |
+    <a href="https://tatoeba.org/en/sentences/search?from=jpn&to=eng&query={{Word}}"> Tatoeba </a> |
+	<a href="https://cjjc.weblio.jp/content/{{Word}}"> Weblio </a> |
+	<a href="akebi://word?kanji={{Word}}&reading={{Reading}}"> Akebi </a>
+</div>
+
+
+<script>
+    var typeans = document.getElementById("typeans");
+    if (typeans != null) typeans.style.fontSize = "26px";
+</script>

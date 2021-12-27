@@ -5,7 +5,8 @@
 
 <div style="font-size:60px">
 {{^Sound}}
-	{{tts zh_CN:Simplified}}
+	<span class="hide_mobile">[Missing Sound]</span>
+	<tts service="android" voice="ja_JP" class="hide_pc">{{Reading}}</tts>
 {{/Sound}}
 {{#Sound}}
 	{{Sound}}
@@ -13,4 +14,4 @@
 </div>
 <hr>
 
-{{type:Simplified}}
+{{type:Word}}
