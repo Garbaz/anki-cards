@@ -1,0 +1,14 @@
+Unique  --  A unique combination of the word and it's reading (e.g. "床[ゆか]")
+Word  --  The word as normally written (e.g. "床")
+Reading  --  The reading (e.g. "ゆか")
+English -- An English translation (e.g. "floor")
+Sound -- A sound file pronouncing the word (e.g. "[sound:yomichan_audio_ゆか_床_2022-02-19-15-32-35.mp3]")
+
+
+I'd recommend to fill these fields using Yomichan, with the following card format:
+
+Unique: {expression}[{reading}]
+Word: {expression}
+Reading: {reading}
+English: {glossary-brief}
+Sound: {audio}
